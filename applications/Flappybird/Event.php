@@ -105,7 +105,7 @@ class Event
    public static function onClose($uid)
    {
        // 广播 xxx 退出了
-       //GateWay::sendToAll();
+       GateWay::sendToAll();
    }
    
    /**
