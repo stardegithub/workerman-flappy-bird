@@ -120,6 +120,8 @@ class Event
         {
             return ;
         }
+        echo(message);
+        
         $message = WebSocket::decode($message);
         // 广播路线
         Gateway::sendToAll(WebSocket::encode(pack('CVVVC', 2, 1, 1, $uid, 0).substr($message, 1)));
